@@ -790,6 +790,117 @@ nav a {
 .nav-links a:hover {
   color: #3AB54B;
 }
+
+/* ── MOBILE HAMBURGER ── */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 8px;
+}
+.nav-hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  /* NAV */
+  nav { padding: 0 16px; flex-wrap: wrap; position: relative; }
+  .nav-hamburger { display: flex; }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #113D3C;
+    padding: 12px 0 16px;
+    gap: 0;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links li { width: 100%; }
+  .nav-links a { display: block; padding: 12px 20px; font-size: 15px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .nav-right { gap: 12px; }
+  .nav-phone-label { display: none; }
+  .nav-phone { font-size: 15px; }
+  .nav-cta { padding: 8px 14px; font-size: 12px; }
+  .nav-logo-img img { height: 34px !important; }
+
+  /* HERO */
+  .hero { padding: 40px 0 0; min-height: unset; }
+  .hero-inner { grid-template-columns: 1fr; gap: 32px; padding: 0 16px 40px; }
+  .hero h1 { font-size: clamp(28px, 7vw, 44px); }
+  .hero-eyebrow { font-size: 10px; }
+  .hero-sub { font-size: 15px; }
+  .hero-trust-row { gap: 8px; }
+  .trust-pill { font-size: 12px; padding: 6px 12px; }
+  .hero-form-wrap { padding: 24px 20px; }
+
+  /* CRED BANNER */
+  .cred-banner-inner { flex-wrap: wrap; gap: 0; }
+  .cred-item { flex: 1 1 50%; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); padding: 16px; }
+
+  /* SECTION PADDING */
+  .section { padding: 56px 16px; }
+  .container { padding: 0 16px; }
+
+  /* PRICING */
+  .pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
+  .pricing-header { margin-bottom: 32px; }
+
+  /* WHY */
+  .why-grid { grid-template-columns: 1fr; }
+  .why-card { padding: 24px 20px; }
+
+  /* GUARANTEE */
+  .guarantee-inner { grid-template-columns: 1fr; text-align: center; gap: 28px; padding: 40px 20px; }
+  .guarantee-badge { margin: 0 auto; }
+  .guarantee-text p { max-width: 100%; }
+  .guarantee-cta { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+
+  /* REVIEWS */
+  .reviews-grid { grid-template-columns: 1fr; }
+  .reviews-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+
+  /* STEPS */
+  .steps-row { grid-template-columns: 1fr 1fr; gap: 24px; }
+
+  /* AREAS */
+  .areas-layout { grid-template-columns: 1fr; gap: 36px; }
+  .areas-list { grid-template-columns: 1fr 1fr; }
+
+  /* FAQ */
+  .faq-layout { grid-template-columns: 1fr; gap: 36px; }
+  .faq-cta-box { padding: 32px 24px; }
+
+  /* FORM */
+  .form-row { grid-template-columns: 1fr; }
+
+  /* STICKY BAR */
+  .sticky-bar { flex-wrap: wrap; gap: 8px; padding: 12px 16px; }
+  .sticky-bar-text { font-size: 13px; width: 100%; text-align: center; }
+  .btn-sticky-call, .btn-sticky-form { flex: 1; text-align: center; font-size: 13px; padding: 10px 12px; }
+
+  /* FOOTER */
+  footer { padding: 32px 16px 24px; }
+  .footer-links { flex-wrap: wrap; gap: 10px 20px; justify-content: center; }
+}
+
+@media (max-width: 480px) {
+  .hero h1 { font-size: 26px; }
+  .hero-form-wrap { padding: 20px 16px; }
+  .cred-item { flex: 1 1 100%; }
+  .areas-list { grid-template-columns: 1fr; }
+  .steps-row { grid-template-columns: 1fr; }
+  .guarantee-inner { padding: 32px 16px; }
+  .section { padding: 44px 16px; }
+}
 </style>
 
 <!-- ═══════════════════════════════════════════════
@@ -1146,6 +1257,9 @@ nav a {
 <!-- NAV -->
 <nav>
   <a href="../index.html" class="nav-logo-img"><img src="../images/2025/09/vinx-logo.webp" onerror="this.src='https://vinxpestcontrol.com/wp-content/uploads/2025/09/vinx-logo.webp'" alt="Vinx Pest Control" style="height:44px;width:auto;filter:brightness(0) invert(1);"></a>
+  <button class="nav-hamburger" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
   <ul class="nav-links">
     <li><a href="#">Residential Pest Control</a></li>
     <li><a href="#">Termite Control</a></li>
