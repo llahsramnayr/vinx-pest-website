@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Vinx Pest Control for professional pest control services in Texas, South Carolina, and Virginia. Call (855) 800-8469 for a free quote.">
+    <title>Contact Us | Vinx Pest Control - How Can We Assist You Today?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Contact Page Specific Styles */
+        .page-hero {
+            padding: 100px 0;
+            background: linear-gradient(90deg, rgba(17, 61, 60, 0.95) 0%, rgba(54, 167, 77, 0.4) 100%),
+                        url('images/banners/contact-page-banner.jpg') center/cover;
+        }
+
+        .page-hero h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 56px;
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.3;
+            max-width: 60%;
+        }
+
+        /* Contact Content Section */
+        .contact-content {
+            padding: 150px 0 80px;
+            background: var(--white);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .promo-image img {
+            border-radius: 10px;
+            box-shadow: var(--shadow-medium);
+            width: 100%;
+        }
+
+        .contact-text p {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        /* Phone Cards */
+        .phone-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .phone-card {
+            width: 270px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 18px 20px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .phone-card:hover {
+            box-shadow: 0 5px 20px rgba(17, 61, 60, 0.1);
+        }
+
+        .phone-card .icon {
+            width: 31px;
+            height: 31px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(54, 167, 77, 0.29);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .phone-card .icon i {
+            color: var(--primary-color);
+            font-size: 14px;
+        }
+
+        .phone-card .card-content h4 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 18px;
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+        }
+
+        .phone-card .card-content a {
+            color: var(--text-dark);
+            font-size: 16px;
+            text-decoration: underline;
+        }
+
+        .phone-card .card-content a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Coupon Notice */
+        .coupon-notice {
+            margin-bottom: 30px;
+        }
+
+        .coupon-notice p {
+            margin-bottom: 15px;
+        }
+
+        /* Contact Form */
+        .contact-form-section {
+            margin-top: 30px;
+        }
+
+        .contact-form {
+            display: grid;
+            gap: 15px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .contact-form input,
+        .contact-form select,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background: var(--white);
+            color: var(--text-dark);
+            font-size: 15px;
+        }
+
+        .contact-form input:focus,
+        .contact-form select:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .contact-form .checkbox-wrap {
+            font-size: 15px;
+            line-height: 1.4;
+        }
+
+        .contact-form .checkbox-wrap a {
+            color: var(--primary-color);
+        }
+
+        .contact-form .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .page-hero h1 {
+                font-size: 42px;
+                max-width: 100%;
+            }
+
+            .contact-content {
+                padding-top: 80px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .phone-card {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page-hero {
+                padding: 50px 0;
+            }
+
+            .page-hero h1 {
+                font-size: 28px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="top-bar">
+            <div class="container">
+                <span class="service-area">Serving Charleston, SC & Surrounding Areas</span>
+                <a href="tel:8558008469" class="phone-link">
+                    <i class="fas fa-phone"></i> (855) 800-8469
+                </a>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img src="images/2025/09/vinx-logo.webp" alt="Vinx Pest Control" onerror="this.src='https://vinxpestcontrol.com/wp-content/uploads/2025/09/vinx-logo.webp'">
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="has-dropdown">
+                        <a href="#">Services</a>
+                        <ul class="dropdown">
+                            <li><a href="services/residential-pest-control.html">Residential Pest Control</a></li>
+                            <li><a href="services/commercial-pest-control.html">Commercial Pest Control</a></li>
+                            <li><a href="services/termite-control.html">Termite Control</a></li>
+                            <li><a href="services/mosquito-control.html">Mosquito Control</a></li>
+                            <li><a href="services/bed-bug-control.html">Bed Bug Control</a></li>
+                            <li><a href="services/rodent-control.html">Rodent Control</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="areas-we-service.html">Areas We Service</a>
+                        <ul class="dropdown">
+                            <li><a href="locations/charleston-sc.html">Charleston, SC</a></li>
+                            <li><a href="locations/mount-pleasant-sc.html">Mount Pleasant, SC</a></li>
+                            <li><a href="locations/summerville-sc.html">Summerville, SC</a></li>
+                            <li><a href="locations/north-charleston-sc.html">North Charleston, SC</a></li>
+                            <li><a href="areas-we-service.html">View All Locations</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="get-quote.html" class="btn-nav">Get a Quote</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>How Can Vinx Pest Control Assist You Today?</h1>
+        </div>
+    </section>
+
+    <!-- Contact Content Section -->
+    <section class="contact-content">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="promo-image">
+                    <img src="images/banners/75_Off.jpg" alt="$75 Off Special Offer" onerror="this.src='https://vinxpestcontrol.com/wp-content/uploads/2025/09/75_Off.jpg'">
+                </div>
+                <div class="contact-text">
+                    <p>Do you have questions about our pest control services, or are you looking to schedule a service in Texas, South Carolina, or Virginia? Please use the form below to get in touch, and we'll respond to you as quickly as possible. For immediate help, please call the <strong>Vinx Pest Control</strong> office nearest you. We're excited to connect with you!</p>
+
+                    <div class="phone-cards">
+                        <a href="tel:9728558469" class="phone-card">
+                            <div class="icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="card-content">
+                                <h4>Dallas, TX area</h4>
+                                <span><a href="tel:9728558469">972-855-8469</a></span>
+                            </div>
+                        </a>
+
+                        <a href="tel:8439208469" class="phone-card">
+                            <div class="icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="card-content">
+                                <h4>Charleston, SC area</h4>
+                                <span><a href="tel:8439208469">843-920-8469</a></span>
+                            </div>
+                        </a>
+
+                        <a href="tel:8646708469" class="phone-card">
+                            <div class="icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="card-content">
+                                <h4>Greenville, SC area</h4>
+                                <span><a href="tel:8646708469">864-670-8469</a></span>
+                            </div>
+                        </a>
+
+                        <a href="tel:8039258469" class="phone-card">
+                            <div class="icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="card-content">
+                                <h4>Columbia, SC area</h4>
+                                <span><a href="tel:8039258469">803-925-8469</a></span>
+                            </div>
+                        </a>
+
+                        <a href="tel:7579008469" class="phone-card">
+                            <div class="icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="card-content">
+                                <h4>Virginia Beach area</h4>
+                                <span><a href="tel:7579008469">757-900-8469</a></span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="coupon-notice">
+                        <p>Before you go, did you take a moment to check our special offers page? Discover our fantastic pest control discounts that are designed to provide you with instant savings!</p>
+                        <a href="get-quote.html" class="btn btn-primary">Find My Coupon</a>
+                    </div>
+
+                    <div class="contact-form-section">
+                        <form class="contact-form" action="#" method="post">
+                            <div class="form-row">
+                                <input type="text" name="first_name" placeholder="First Name*" required>
+                                <input type="text" name="last_name" placeholder="Last Name*" required>
+                            </div>
+                            <div class="form-row">
+                                <input type="email" name="email" placeholder="Email Address*" required>
+                                <input type="tel" name="phone" placeholder="Phone Number*" required>
+                            </div>
+                            <div class="form-row">
+                                <input type="text" name="city" placeholder="City*" required>
+                                <input type="text" name="state" placeholder="State*" required>
+                            </div>
+                            <textarea name="message" rows="4" placeholder="What Services are you looking For?*" required></textarea>
+                            <div class="checkbox-wrap">
+                                <label>
+                                    <input type="checkbox" name="consent" required>
+                                    By submitting this form and signing up for texts, you consent to receive marketing text messages from Vinx Pest Control at the number provided. Consent is not a condition of purchase. Msg & data rates may apply. Msg frequency varies. Unsubscribe at any time by replying STOP. See our <a href="privacy-policy.html">Privacy Policy</a> and Terms & Conditions.
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i> Submit
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Get Started?</h2>
+            <p>Get your free pest inspection and quote today. We're here to help!</p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="get-quote.html" class="btn btn-white">Get a Free Quote</a>
+                <a href="tel:8558008469" class="btn btn-primary" style="background: var(--secondary-color);">Call (855) 800-8469</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="images/2025/09/vinx-logo.webp" alt="Vinx Pest Control" class="footer-logo" onerror="this.src='https://vinxpestcontrol.com/wp-content/uploads/2025/09/vinx-logo.webp'">
+                    <p>Vinx Pest Control is your trusted partner for comprehensive pest management in Charleston, South Carolina and surrounding areas. We're committed to protecting your home and family from unwanted pests.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/VinxPestControl" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/vinxpestcontrol" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@vinxpestcontrol" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="services/residential-pest-control.html">Residential Pest Control</a></li>
+                        <li><a href="services/commercial-pest-control.html">Commercial Pest Control</a></li>
+                        <li><a href="services/termite-control.html">Termite Control</a></li>
+                        <li><a href="services/mosquito-control.html">Mosquito Control</a></li>
+                        <li><a href="services/bed-bug-control.html">Bed Bug Control</a></li>
+                        <li><a href="services/rodent-control.html">Rodent Control</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Service Areas</h4>
+                    <ul>
+                        <li><a href="locations/charleston-sc.html">Charleston, SC</a></li>
+                        <li><a href="locations/mount-pleasant-sc.html">Mount Pleasant, SC</a></li>
+                        <li><a href="locations/summerville-sc.html">Summerville, SC</a></li>
+                        <li><a href="locations/north-charleston-sc.html">North Charleston, SC</a></li>
+                        <li><a href="locations/goose-creek-sc.html">Goose Creek, SC</a></li>
+                        <li><a href="areas-we-service.html">View All Areas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:8558008469">(855) 800-8469</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@vinxpestcontrol.com">info@vinxpestcontrol.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Mon-Fri: 8AM - 6PM<br>Sat: 9AM - 2PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Vinx Pest Control. All rights reserved.</p>
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

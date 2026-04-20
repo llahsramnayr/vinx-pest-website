@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Vinx Pest Control - Your trusted pest management experts serving Texas, South Carolina, and Virginia. Exceptional team, superior products, guaranteed results.">
+    <title>About Us | Vinx Pest Control - Your Trusted Pest Management Experts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* About Page Specific Styles */
+        .page-hero {
+            padding: 120px 0 100px;
+            background: linear-gradient(90deg, rgba(17, 61, 60, 0.95) 0%, rgba(54, 167, 77, 0.4) 100%),
+                        url('images/banners/Banner_Image.jpg') center/cover;
+            position: relative;
+        }
+
+        .page-hero .hero-content {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .page-hero h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 56px;
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.3;
+            margin-bottom: 20px;
+        }
+
+        /* Quote Form Box */
+        .quote-form-box {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.21);
+            margin-bottom: -200px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .quote-form-box .form-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .quote-form-box .form-header img {
+            width: 50px;
+        }
+
+        .quote-form-box .form-header p {
+            font-family: 'Oswald', sans-serif;
+            font-size: 32px;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .quote-form-box .form-header strong {
+            color: var(--primary-color);
+        }
+
+        .quote-form-box input {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(17, 61, 60, 0.14);
+            border-radius: 4px;
+            background: rgba(17, 61, 60, 0.16);
+            font-size: 16px;
+        }
+
+        .quote-form-box .btn {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .call-box {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .call-box .icon {
+            width: 46px;
+            height: 46px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--secondary-color);
+            color: var(--white);
+            border-radius: 50%;
+            border: 3px solid var(--primary-color);
+        }
+
+        .call-box .call-text h4 {
+            font-family: 'Oswald', sans-serif;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 2px;
+        }
+
+        .call-box .call-text p {
+            margin: 0;
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* About Content Section */
+        .about-content {
+            padding: 150px 0 80px;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .about-grid.reverse {
+            grid-template-columns: 2fr 1fr;
+        }
+
+        .promo-image img {
+            border-radius: 10px;
+            box-shadow: var(--shadow-medium);
+            width: 100%;
+        }
+
+        .about-text h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 46px;
+            font-weight: 700;
+            color: var(--secondary-color);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .about-image img {
+            border-radius: 10px;
+            width: 100%;
+        }
+
+        /* Feature Blurbs */
+        .feature-blurb {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .feature-blurb .icon-wrap {
+            flex-shrink: 0;
+            width: 68px;
+            height: 68px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(57, 180, 74, 0.3);
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .feature-blurb .icon-wrap img {
+            width: 48px;
+            height: 48px;
+        }
+
+        .feature-blurb h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 32px;
+            color: var(--primary-color);
+            line-height: 1.1;
+            margin-bottom: 10px;
+        }
+
+        .feature-blurb p {
+            font-size: 16px;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* Regional Section */
+        .regional-section {
+            padding: 60px 0;
+        }
+
+        .regional-section h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 46px;
+            font-weight: 700;
+            color: var(--secondary-color);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .regional-section h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 40px;
+            color: var(--secondary-color);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        /* Get Started CTA */
+        .get-started-cta {
+            background: linear-gradient(90deg, rgba(17, 61, 60, 0.9) 0%, rgba(17, 61, 60, 0.7) 100%),
+                        url('images/banners/Contact_Us.jpg') left center / contain no-repeat;
+            padding: 40px;
+            border-radius: 10px;
+            position: relative;
+            margin-top: 40px;
+        }
+
+        .get-started-cta::after {
+            content: '';
+            position: absolute;
+            background: url('images/banners/get_started_background.webp') 100% / 100% 100% no-repeat;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            height: 100%;
+            width: 77%;
+            z-index: 0;
+        }
+
+        .get-started-cta h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 32px;
+            color: var(--white);
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .get-started-cta .btn {
+            position: relative;
+            z-index: 1;
+            display: block;
+            width: fit-content;
+            margin: 0 auto;
+        }
+
+        /* Estimate Section */
+        .estimate-section {
+            background: linear-gradient(90deg, rgba(17, 61, 60, 0.62) 0%, rgba(255, 255, 255, 0) 100%),
+                        url('images/banners/New-Get-Your-Free-Estimate.webp') center / cover;
+            padding: 0;
+        }
+
+        .estimate-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .estimate-form-wrap {
+            background: linear-gradient(180deg, var(--secondary-color) 0%, rgba(17, 61, 60, 0.81) 100%);
+            padding: 65px 35px;
+        }
+
+        .estimate-form-wrap .subtitle {
+            font-family: 'Oswald', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--primary-color);
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .estimate-form-wrap h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 50px;
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+
+        .estimate-form-wrap > p {
+            color: var(--white);
+            margin-bottom: 25px;
+        }
+
+        .estimate-form input,
+        .estimate-form select,
+        .estimate-form textarea {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 15px;
+            border: 1px solid var(--secondary-color);
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.15);
+            color: var(--white);
+            font-size: 15px;
+        }
+
+        .estimate-form input::placeholder,
+        .estimate-form textarea::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .estimate-form select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+        }
+
+        .estimate-form .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .estimate-form .checkbox-wrap {
+            color: var(--white);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .estimate-form .checkbox-wrap a {
+            color: var(--primary-color);
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .page-hero .hero-content {
+                grid-template-columns: 1fr;
+            }
+
+            .page-hero h1 {
+                font-size: 42px;
+            }
+
+            .quote-form-box {
+                margin-bottom: 0;
+                max-width: 500px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .about-content {
+                padding-top: 80px;
+            }
+
+            .about-grid,
+            .about-grid.reverse {
+                grid-template-columns: 1fr;
+            }
+
+            .about-text h2,
+            .regional-section h2 {
+                font-size: 36px;
+            }
+
+            .regional-section h3 {
+                font-size: 32px;
+            }
+
+            .estimate-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .estimate-form-wrap h2 {
+                font-size: 34px;
+            }
+
+            .get-started-cta::after {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page-hero h1 {
+                font-size: 32px;
+            }
+
+            .feature-blurb {
+                flex-direction: column;
+            }
+
+            .feature-blurb h3 {
+                font-size: 26px;
+            }
+
+            .estimate-form .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .estimate-form-wrap {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="top-bar">
+            <div class="container">
+                <span class="service-area">Serving Charleston, SC & Surrounding Areas</span>
+                <a href="tel:8558008469" class="phone-link">
+                    <i class="fas fa-phone"></i> (855) 800-8469
+                </a>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img src="images/2025/09/vinx-logo.webp" alt="Vinx Pest Control" onerror="this.src='https://vinxpestcontrol.com/wp-content/uploads/2025/09/vinx-logo.webp'">
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="has-dropdown">
+                        <a href="#">Services</a>
+                        <ul class="dropdown">
+                            <li><a href="services/residential-pest-control.html">Residential Pest Control</a></li>
+                            <li><a href="services/commercial-pest-control.html">Commercial Pest Control</a></li>
+                            <li><a href="services/termite-control.html">Termite Control</a></li>
+                            <li><a href="services/mosquito-control.html">Mosquito Control</a></li>
+                            <li><a href="services/bed-bug-control.html">Bed Bug Control</a></li>
+                            <li><a href="services/rodent-control.html">Rodent Control</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="areas-we-service.html">Areas We Service</a>
+                        <ul class="dropdown">
+                            <li><a href="locations/charleston-sc.html">Charleston, SC</a></li>
+                            <li><a href="locations/mount-pleasant-sc.html">Mount Pleasant, SC</a></li>
+                            <li><a href="locations/summerville-sc.html">Summerville, SC</a></li>
+                            <li><a href="locations/north-charleston-sc.html">North Charleston, SC</a></li>
+                            <li><a href="areas-we-service.html">View All Locations</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html" class="active">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="get-quote.html" class="btn-nav">Get a Quote</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Explore Vinx Pest Control: Your Trusted Pest Management Experts</h1>
+                </div>
+                <div class="quote-form-box">
+                    <div class="form-header">
+                        <img src="images/2025/09/GetFreEstimate.svg" alt="Get Free Estimate">
+                        <p>Get A <strong>Free</strong> Quote</p>
+                    </div>
+                    <form action="#" method="post">
+                        <input type="text" name="name" placeholder="Name" required>
+                        <input type="email" name="email" placeholder="Email Address" required>
+                        <input type="tel" name="phone" placeholder="Mobile Number" required>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                    <div class="call-box">
+                        <div class="icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="call-text">
+                            <h4><a href="tel:8558008469">Give Us a Call</a></h4>
+                            <p>For Faster Service.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Content Section -->
+    <section class="about-content">
+        <div class="container">
+            <div class="about-grid">
+                <div class="promo-image">
+                    <img src="images/banners/75_Off.jpg" alt="$75 Off Special Offer" onerror="this.src='https://vinxpestcontrol.com/wp-content/uploads/2025/09/75_Off.jpg'">
+                </div>
+                <div class="about-text">
+                    <h2>Why Choose Vinx Pest Control?</h2>
+                    <img src="images/services/Choose_Vinx_Pest_Control.jpg" alt="Why Choose Vinx Pest Control" style="width: 100%; border-radius: 10px; margin-bottom: 29px;" onerror="this.src='https://vinxpestcontrol.com/wp-content/uploads/2025/09/Choose_Vinx_Pest_Control.jpg'">
+
+                    <h2>A Pest Control Company You Can Trust!</h2>
+                    <p>At Vinx Pest Control, our mission is clear: to alleviate your concerns and safeguard your family by eliminating unwanted or hazardous pests from your home. Our commitment to excellence is evident in every aspect of our operations, from the team we assemble to the products we use and the guarantees we offer.</p>
+
+                    <div class="feature-blurb">
+                        <div class="icon-wrap">
+                            <img src="images/2025/09/Exceptional_Team.svg" alt="Exceptional Team">
+                        </div>
+                        <div class="feature-content">
+                            <h3>Exceptional Team for Exceptional Service</h3>
+                            <p>Our belief in excellence extends to our team. We understand that to deliver exceptional service, we must have exceptional people. That's why every technician at Vinx Pest Control is not only certified but also receives comprehensive training that exceeds industry standards. Beyond technical skills, our technicians get trained in-home to ensure that they are fully equipped to meet your needs. This commitment to excellence doesn't stop with our technicians; it includes our office staff, customer service representatives, and sales team, all of whom are among the best in the industry.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-blurb">
+                        <div class="icon-wrap">
+                            <img src="images/2025/09/Superior_Products.svg" alt="Superior Products">
+                        </div>
+                        <div class="feature-content">
+                            <h3>Superior Products for Effective Pest Control</h3>
+                            <p>We refuse to compromise on the quality of our pest control solutions. At Vinx Pest Control, you'll only find eco-friendly, full-strength products capable of effectively dealing with pests in and around your home. Our rigorous product testing is a testament to our commitment to your satisfaction, ensuring that we deliver on our promise to keep your home pest-free.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-blurb">
+                        <div class="icon-wrap">
+                            <img src="images/2025/09/Our_Guarantee.svg" alt="Our Guarantee">
+                        </div>
+                        <div class="feature-content">
+                            <h3>Our Guarantee - Your Peace of Mind</h3>
+                            <p>We value your trust, time, and investment in our services. That's why we guarantee our work. If you encounter any pest activity following your quarterly treatment, we will return to re-treat your home at no extra cost. And, if you're still not satisfied, we offer a full refund. Our confidence in our team and products allows us to make this promise to you.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-blurb">
+                        <div class="icon-wrap">
+                            <img src="images/2025/09/Choose_Vinx_Pest_Control.svg" alt="Why Choose Vinx">
+                        </div>
+                        <div class="feature-content">
+                            <h3>Why Choose Vinx Pest Control?</h3>
+                            <p>With over 150 5-star reviews, our reputation for making customers happy speaks for itself. Vinx Pest Control is dedicated to improving your quality of life by providing reliable, effective pest control services. Our active participation in the pest control community, including memberships in key associations, ensures we remain at the forefront of pest management techniques and advancements.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-blurb">
+                        <div class="icon-wrap">
+                            <img src="images/2025/09/Special_Offer.svg" alt="Special Offers">
+                        </div>
+                        <div class="feature-content">
+                            <h3>Special Offers Just for You</h3>
+                            <p>We're not just about eliminating pests; we're about adding value to our services. If you appreciate our team and approach to pest control, you'll be thrilled with our money-saving offers. Explore our exclusive deals and start saving today!</p>
+                        </div>
+                    </div>
+
+                    <a href="get-quote.html" class="btn btn-primary">Save Money</a>
+
+                    <p style="margin-top: 40px;">Thank you for considering Vinx Pest Control. We're here to protect your home and make your life better.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Regional Section -->
+    <section class="regional-section">
+        <div class="container">
+            <h2>Texas, South Carolina, & Virginia Pest Control Leading Exterminators in Your Area</h2>
+            <p>At Vinx Pest Control, our approach to pest management goes beyond mere service; we aim to create meaningful connections with each of our clients. We understand the importance of not just treating a house but protecting a home. That's why we assign dedicated technicians to become familiar with you, your home, and the specific pest challenges you might face depending on your location. With offices in Texas, South Carolina, and Virginia, we're deeply embedded in the communities we serve, valuing the relationships we build with our customers as much as the services we provide.</p>
+            <p>As a company with strong local roots, our commitment to our customers, their families, and our communities is unparalleled. This dedication has been a cornerstone of our success, enabling us to offer exceptional pest control services across multiple states.</p>
+
+            <h3>Complimentary Inspection & Quote</h3>
+            <p>Choosing Vinx Pest Control means more than just exceptional pest management; it's an opportunity to save on comprehensive protection for your home. Discover the variety of programs we offer and contact us to learn how much you can save by partnering with Vinx Pest Control, your leading local exterminators.</p>
+            <p>Your home deserves the best protection. Let Vinx Pest Control be your trusted partner in keeping your home safe and pest-free.</p>
+
+            <div class="get-started-cta">
+                <h3>Get Started With Vinx Today!</h3>
+                <a href="contact.html" class="btn btn-primary">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free Estimate Section -->
+    <section class="estimate-section">
+        <div class="estimate-grid">
+            <div class="estimate-form-wrap">
+                <span class="subtitle">WE USE THE VERY</span>
+                <h2>Get Your Free Estimate</h2>
+                <p>Complete the form below and we will contact you to discuss your pest problem!</p>
+
+                <form class="estimate-form" action="#" method="post">
+                    <div class="form-row">
+                        <input type="text" name="first_name" placeholder="First Name*" required>
+                        <input type="text" name="last_name" placeholder="Last Name*" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="email" name="email" placeholder="Email Address*" required>
+                        <input type="tel" name="phone" placeholder="Phone Number*" required>
+                    </div>
+                    <select name="services" required>
+                        <option value="">Choose a service*</option>
+                        <option value="residential">Residential Pest Control</option>
+                        <option value="commercial">Commercial Pest Control</option>
+                    </select>
+                    <textarea name="message" rows="3" placeholder="What Services are you looking For?*" required></textarea>
+                    <div class="checkbox-wrap">
+                        <label>
+                            <input type="checkbox" name="consent" required>
+                            By submitting this form and signing up for texts, you consent to receive marketing text messages from Vinx Pest Control at the number provided. Consent is not a condition of purchase. Msg & data rates may apply. Msg frequency varies. Unsubscribe at any time by replying STOP. See our <a href="privacy-policy.html">Privacy Policy</a> and Terms & Conditions.
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Submit
+                    </button>
+                </form>
+            </div>
+            <div class="estimate-image">
+                <!-- Right side is background image -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="images/2025/09/vinx-logo.webp" alt="Vinx Pest Control" class="footer-logo" onerror="this.src='https://vinxpestcontrol.com/wp-content/uploads/2025/09/vinx-logo.webp'">
+                    <p>Vinx Pest Control is your trusted partner for comprehensive pest management in Charleston, South Carolina and surrounding areas. We're committed to protecting your home and family from unwanted pests.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/VinxPestControl" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/vinxpestcontrol" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@vinxpestcontrol" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="services/residential-pest-control.html">Residential Pest Control</a></li>
+                        <li><a href="services/commercial-pest-control.html">Commercial Pest Control</a></li>
+                        <li><a href="services/termite-control.html">Termite Control</a></li>
+                        <li><a href="services/mosquito-control.html">Mosquito Control</a></li>
+                        <li><a href="services/bed-bug-control.html">Bed Bug Control</a></li>
+                        <li><a href="services/rodent-control.html">Rodent Control</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Service Areas</h4>
+                    <ul>
+                        <li><a href="locations/charleston-sc.html">Charleston, SC</a></li>
+                        <li><a href="locations/mount-pleasant-sc.html">Mount Pleasant, SC</a></li>
+                        <li><a href="locations/summerville-sc.html">Summerville, SC</a></li>
+                        <li><a href="locations/north-charleston-sc.html">North Charleston, SC</a></li>
+                        <li><a href="locations/goose-creek-sc.html">Goose Creek, SC</a></li>
+                        <li><a href="areas-we-service.html">View All Areas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:8558008469">(855) 800-8469</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@vinxpestcontrol.com">info@vinxpestcontrol.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Mon-Fri: 8AM - 6PM<br>Sat: 9AM - 2PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Vinx Pest Control. All rights reserved.</p>
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

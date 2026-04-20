@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# WordPress backup (large files)
+*.wpress
+**/vinxpestcontrol-com-*/
+
+# Extracted backup directory
+**/extracted_backup/
+
+# Large video files (exceed GitHub 100MB limit)
+*.mp4
+
+# Node modules if added later
+node_modules/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo

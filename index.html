@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinx Pest Control | The Pest Control Experts Who Care</title>
+    <meta name="description" content="Local, reliable, and 100% guaranteed pest control. Vinx protects homes from ants, spiders, palmetto bugs, wasps, termites, and rodents.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        :root {
+            --primary-green: #36A74D;
+            --dark-green: #113D3C;
+            --light-bg: #F5F5F5;
+            --white: #FFFFFF;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --border-color: #E8E8E8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background: var(--primary-green);
+            padding: 8px 0;
+        }
+
+        .top-bar .container {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .top-bar-links {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .top-bar-links a {
+            color: var(--white);
+            text-decoration: underline;
+            font-size: 14px;
+        }
+
+        .top-bar-links .divider {
+            color: var(--white);
+        }
+
+        /* Main Nav */
+        .main-nav {
+            background: var(--dark-green);
+            padding: 15px 0;
+        }
+
+        .main-nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .nav-menu .has-dropdown > a::after {
+            content: ' ▾';
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(90deg, rgba(17, 61, 60, 0.9) 0%, rgba(17, 61, 60, 0.7) 100%),
+                        url('https://vinxpestcontrol.com/wp-content/uploads/2026/01/Vinx-Technician-in-Charleston-Excellent-Customer-Service-scaled.jpg') center/cover;
+            min-height: 600px;
+            padding: 60px 0;
+            position: relative;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .hero-text {
+            color: var(--white);
+        }
+
+        .hero-text h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 15px;
+        }
+
+        .hero-subtitle {
+            font-family: 'Oswald', sans-serif;
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .hero-tagline {
+            font-size: 18px;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+
+        .hero-description {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .google-reviews {
+            font-size: 16px;
+        }
+
+        .google-reviews strong {
+            font-weight: 700;
+        }
+
+        .google-reviews .stars {
+            color: #FFD700;
+        }
+
+        .google-reviews .google-word {
+            color: #4285F4;
+        }
+
+        /* CTA Box */
+        .cta-box {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-box h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--dark-green);
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .cta-box .cta-subtitle {
+            text-align: center;
+            font-size: 16px;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .cta-option {
+            display: block;
+            padding: 15px 20px;
+            border: 3px solid rgba(17, 61, 60, 0.15);
+            border-radius: 15px;
+            margin-bottom: 12px;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+            background: var(--white);
+        }
+
+        .cta-option:hover {
+            border-color: var(--dark-green);
+        }
+
+        .cta-option h4 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--dark-green);
+            margin-bottom: 3px;
+        }
+
+        .cta-option h4 i {
+            color: var(--primary-green);
+            margin-right: 8px;
+        }
+
+        .cta-option p {
+            font-size: 14px;
+            font-style: italic;
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        /* Welcome Section */
+        .welcome-section {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .welcome-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .welcome-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .welcome-content .section-label {
+            color: var(--primary-green);
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .welcome-content h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--dark-green);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .welcome-content ul {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .welcome-content ul li {
+            padding-left: 25px;
+            position: relative;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .welcome-content ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-green);
+            font-weight: bold;
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            padding: 80px 0;
+            background: var(--light-bg);
+        }
+
+        .pricing-section h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--dark-green);
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .pricing-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 3px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .pricing-card.featured {
+            border-color: var(--primary-green);
+            transform: scale(1.02);
+        }
+
+        .pricing-badge img {
+            height: 80px;
+            margin-bottom: 15px;
+        }
+
+        .pricing-card h4 {
+            font-size: 16px;
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+
+        .pricing-tagline {
+            font-weight: 600;
+            color: var(--dark-green);
+            margin-bottom: 15px;
+        }
+
+        .pricing-features {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .pricing-features li {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 14px;
+        }
+
+        .pricing-features li i {
+            color: var(--primary-green);
+            margin-right: 10px;
+        }
+
+        .pricing-price {
+            margin: 20px 0;
+        }
+
+        .pricing-price .amount {
+            font-family: 'Oswald', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--dark-green);
+        }
+
+        .pricing-price .period {
+            font-size: 18px;
+            color: var(--text-light);
+        }
+
+        .pricing-btn {
+            display: inline-block;
+            background: linear-gradient(to bottom, #36a74d, #277832);
+            color: var(--white);
+            padding: 14px 40px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-btn:hover {
+            background: linear-gradient(to bottom, #113d3c, #113d3c);
+        }
+
+        /* Guarantee Section */
+        .guarantee-section {
+            padding: 60px 0;
+            background: var(--white);
+        }
+
+        .guarantee-box {
+            background: linear-gradient(135deg, var(--primary-green), #277832);
+            border-radius: 20px;
+            padding: 40px;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .guarantee-box h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .guarantee-box p {
+            font-size: 16px;
+            line-height: 1.7;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Reviews Section */
+        .reviews-section {
+            padding: 80px 0;
+            background: var(--light-bg);
+        }
+
+        .reviews-section .section-label {
+            color: var(--primary-green);
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .reviews-section h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--dark-green);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .review-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .review-stars {
+            color: #FFD700;
+            margin-bottom: 15px;
+        }
+
+        .review-card p {
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .review-author strong {
+            color: var(--dark-green);
+        }
+
+        /* Stand Behind Section */
+        .stand-behind-section {
+            padding: 80px 0;
+            background: var(--dark-green);
+            color: var(--white);
+        }
+
+        .stand-behind-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .stand-behind-content h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .stand-behind-content p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+
+        .trust-badges {
+            display: flex;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .trust-badge {
+            text-align: center;
+        }
+
+        .trust-badge-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--primary-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+        }
+
+        .trust-badge-icon i {
+            font-size: 28px;
+            color: var(--white);
+        }
+
+        .trust-badge span {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* Pest Issues Section */
+        .pest-issues-section {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .pest-issues-section .section-label {
+            color: var(--primary-green);
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .pest-issues-section h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--dark-green);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .pest-descriptions {
+            max-width: 900px;
+            margin: 0 auto 40px;
+        }
+
+        .pest-descriptions h4 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 20px;
+            color: var(--dark-green);
+            margin-bottom: 10px;
+        }
+
+        .pest-descriptions p {
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .pest-icons-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .pest-icon {
+            text-align: center;
+            width: 100px;
+        }
+
+        .pest-icon img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+        }
+
+        .pest-icon span {
+            font-size: 13px;
+            color: var(--text-dark);
+        }
+
+        /* Best Experts Section */
+        .best-experts-section {
+            padding: 80px 0;
+            background: linear-gradient(rgba(17, 61, 60, 0.9), rgba(17, 61, 60, 0.9)),
+                        url('https://vinxpestcontrol.com/wp-content/uploads/2025/09/dsc08913-1.jpg') center/cover;
+            color: var(--white);
+        }
+
+        .experts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .experts-content h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .experts-content p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            opacity: 0.95;
+        }
+
+        .experts-image img {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        /* Local Pest Control Section */
+        .local-section {
+            padding: 80px 0;
+            background: var(--white);
+            text-align: center;
+        }
+
+        .local-section h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--dark-green);
+            margin-bottom: 20px;
+        }
+
+        .local-section p {
+            font-size: 16px;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            line-height: 1.7;
+        }
+
+        .local-section .btn-link {
+            color: var(--primary-green);
+            text-decoration: underline;
+            font-weight: 600;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 80px 0;
+            background: var(--light-bg);
+        }
+
+        .faq-section h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--dark-green);
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .faq-section .faq-subtitle {
+            text-align: center;
+            font-size: 16px;
+            color: var(--text-light);
+            margin-bottom: 40px;
+        }
+
+        .faq-grid {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border-radius: 10px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 20px;
+            border: none;
+            background: none;
+            text-align: left;
+            font-family: 'Oswald', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--dark-green);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question i {
+            color: var(--primary-green);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 20px 20px;
+            max-height: 500px;
+        }
+
+        .faq-answer p {
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* Questions CTA */
+        .questions-cta {
+            padding: 60px 0;
+            background: var(--primary-green);
+            text-align: center;
+            color: var(--white);
+        }
+
+        .questions-cta h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .questions-cta p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .questions-cta .btn-white {
+            display: inline-block;
+            background: var(--white);
+            color: var(--dark-green);
+            padding: 14px 40px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        /* Coverage Section */
+        .coverage-section {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .coverage-section .section-label {
+            color: var(--primary-green);
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .coverage-section h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--dark-green);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .coverage-box {
+            background: var(--dark-green);
+            border-radius: 20px;
+            padding: 40px;
+            color: var(--white);
+        }
+
+        .coverage-box h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .coverage-box p {
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .coverage-stats {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+        }
+
+        .coverage-stat h4 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--primary-green);
+        }
+
+        .coverage-stat span {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        .site-footer {
+            background: var(--dark-green);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-col ul a:hover {
+            color: var(--primary-green);
+        }
+
+        .footer-logo {
+            height: 50px;
+            margin-bottom: 15px;
+        }
+
+        .footer-about p {
+            font-size: 14px;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--primary-green);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .footer-bottom ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .footer-bottom a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 992px) {
+            .hero-grid,
+            .welcome-grid,
+            .stand-behind-grid,
+            .experts-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-grid,
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .hero-text h1 {
+                font-size: 42px;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .coverage-stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .trust-badges {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .mobile-menu-toggle span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: var(--white);
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-links">
+                <a href="https://vinxpestcontrol.clicktobuyservices.com/" target="_blank">Sign Up Online</a>
+                <span class="divider">|</span>
+                <a href="tel:8555986973">855-598-6973</a>
+                <span class="divider">|</span>
+                <a href="https://vinxpestcontrol.clicktobuyservices.com/" target="_blank">My Account</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/2025/09/vinx-logo.webp" alt="Vinx Pest Control" onerror="this.src='https://vinxpestcontrol.com/wp-content/uploads/2025/09/vinx-logo.webp'">
+            </a>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li class="has-dropdown"><a href="about.html">About</a></li>
+                <li><a href="special-offers.html">Special Offers</a></li>
+                <li class="has-dropdown"><a href="services/residential-pest-control.html">Residential</a></li>
+                <li class="has-dropdown"><a href="services/commercial-pest-control.html">Commercial</a></li>
+                <li class="has-dropdown"><a href="areas-we-service.html">Areas We Service</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <h1>The Pest Control Experts<br>Who Care</h1>
+                    <p class="hero-subtitle">The Top-Rated Pest Control</p>
+                    <p class="hero-tagline">Local, Reliable, and 100% Guaranteed</p>
+                    <p class="hero-description">Pests don't belong in your home. Vinx protects homes from ants, spiders, palmetto bugs, wasps, termites, and rodents like mice and rats — guaranteed.</p>
+                    <div class="google-reviews">
+                        OVER <strong>2,000</strong> <span class="stars">★★★★★</span> <span class="google-word">Google</span> Reviews
+                    </div>
+                </div>
+                <div class="cta-box">
+                    <h3>Get Started in 60 Seconds</h3>
+                    <p class="cta-subtitle">Choose what's easiest for you</p>
+
+                    <a href="get-quote.html" class="cta-option">
+                        <h4>Request a Quote</h4>
+                        <p>We usually respond in 2 minutes</p>
+                    </a>
+
+                    <a href="tel:8555986973" class="cta-option">
+                        <h4><i class="fas fa-phone"></i> Call (855) 598-6973</h4>
+                        <p>Get a Live Person (no AI agents here!)</p>
+                    </a>
+
+                    <a href="https://vinxpestcontrol.clicktobuyservices.com/" target="_blank" class="cta-option">
+                        <h4><i class="fas fa-qrcode"></i> Sign Up Online</h4>
+                        <p>Get pricing and schedule now</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+        <div class="container">
+            <div class="welcome-grid">
+                <div class="welcome-image">
+                    <img src="https://vinxpestcontrol.com/wp-content/uploads/2025/09/Screenshot-2025-09-20-at-10.34.08-AM.webp" alt="Vinx Pest Control Technician">
+                </div>
+                <div class="welcome-content">
+                    <p class="section-label">WELCOME TO VINX PEST CONTROL</p>
+                    <h2>YOUR TRUSTED PEST EXPERTS</h2>
+                    <ul>
+                        <li>Locally Owned & Operated</li>
+                        <li>Licensed, Bonded & Insured</li>
+                        <li>Same Day and Next Day Service Available</li>
+                        <li>Pet and Family Friendly</li>
+                        <li>100% Money Back Guarantee</li>
+                    </ul>
+                    <p>We're a local family owned and run pest control company, focused on treating our customers like family. We've seen and removed tens of thousands of pest infestations, so you can rest assured you're hiring some of the most experienced pest control professionals in your area.</p>
+                    <p>Our residential and commercial pest control services cover ants, roaches, spiders, rodents, and more — backed by our satisfaction guarantee.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <div class="container">
+            <h2>Compare Packages & Get Protected</h2>
+            <div class="pricing-grid">
+                <!-- HomeGuard -->
+                <div class="pricing-card">
+                    <div class="pricing-badge">
+                        <img src="images/pricing/vinx-home-guard.png" alt="HomeGuard" onerror="this.src='https://vinxpestcontrol.com/wp-content/uploads/2025/09/vinx-home-guard.png'">
+                    </div>
+                    <h4>Standard Residential Protection</h4>
+                    <p class="pricing-tagline">Get rid of your pests today with:</p>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 4 Comprehensive Seasonal Treatments Per Year</li>
+                        <li><i class="fas fa-check"></i> Coverage for ants, spiders, cockroaches, wasps and 50+ pests</li>
+                        <li><i class="fas fa-check"></i> Interior, Exterior and Yard Barrier Protection</li>
+                        <li><i class="fas fa-check"></i> Unlimited Free Re-Services</li>
+                        <li><i class="fas fa-check"></i> 100% Money-Back Guarantee</li>
+                    </ul>
+                    <div class="pricing-price">
+                        <span class="amount">$49</span><span class="period">/mo</span>
+                    </div>
+                    <a href="https://vinxpestcontrol.clicktobuyservices.com/" class="pricing-btn">Get Started</a>
+                </div>
+
+                <!-- Guard Plus -->
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">
+                        <img src="images/pricing/vinx-guard-plus.png" alt="Guard Plus" onerror="this.src='https://vinxpestcontrol.com/wp-content/uploads/2025/09/vinx-guard-plus.png'">
+                    </div>
+                    <h4>Upgraded Residential Protection</h4>
+                    <p class="pricing-tagline">Everything in HomeGuard + Additional Yard Protection</p>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 6 Home & Yard Treatments Per Year</li>
+                        <li><i class="fas fa-check"></i> Yard Fire Ant Elimination Guarantee</li>
+                        <li><i class="fas fa-check"></i> Flea & Tick Elimination Guarantee</li>
+                        <li><i class="fas fa-check"></i> Unlimited Free Re-Services</li>
+                        <li><i class="fas fa-check"></i> 100% Money-Back Guarantee</li>
+                    </ul>
+                    <div class="pricing-price">
+                        <span class="amount">$69</span><span class="period">/mo</span>
+                    </div>
+                    <a href="https://vinxpestcontrol.clicktobuyservices.com/" class="pricing-btn">Get Started</a>
+                </div>
+
+                <!-- Platinum -->
+                <div class="pricing-card">
+                    <div class="pricing-badge">
+                        <img src="images/pricing/vinx-guard-platinum.png" alt="Platinum" onerror="this.src='https://vinxpestcontrol.com/wp-content/uploads/2025/09/vinx-guard-platinum.png'">
+                    </div>
+                    <h4>Most Comprehensive Protection</h4>
+                    <p class="pricing-tagline">Everything in Plus + Mosquito Treatments and more</p>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 9 Treatments Per Year</li>
+                        <li><i class="fas fa-check"></i> Monthly Mosquito Treatment</li>
+                        <li><i class="fas fa-check"></i> Interior Flea & Tick Coverage</li>
+                        <li><i class="fas fa-check"></i> Free Bed Bug Treatments if Needed</li>
+                        <li><i class="fas fa-check"></i> 100% Money-Back Guarantee</li>
+                    </ul>
+                    <div class="pricing-price">
+                        <span class="amount">$99</span><span class="period">/mo</span>
+                    </div>
+                    <a href="https://vinxpestcontrol.clicktobuyservices.com/" class="pricing-btn">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section class="guarantee-section">
+        <div class="container">
+            <div class="guarantee-box">
+                <h3>Our Pest-Free Guarantee</h3>
+                <p>We stand behind our work 100%. If pests return between scheduled services, we'll come back and re-treat your home at no additional cost. Still not satisfied? We offer a full money-back guarantee. That's how confident we are in our team, our products, and our methods.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews-section">
+        <div class="container">
+            <p class="section-label">CUSTOMER REVIEWS</p>
+            <h2>Trusted by Many Families</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p>"Vinx has been amazing! Since starting service, we haven't seen a single bug in our home. The technicians are always professional and friendly."</p>
+                    <div class="review-author">
+                        <strong>Sarah M.</strong> - Charleston, SC
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p>"Best pest control company we've ever used. They showed up on time, were thorough, and the results have been incredible. Highly recommend!"</p>
+                    <div class="review-author">
+                        <strong>Mike T.</strong> - Mount Pleasant, SC
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p>"Had a serious palmetto bug problem. Vinx came out the next day and took care of it completely. Great service and fair pricing!"</p>
+                    <div class="review-author">
+                        <strong>Jennifer L.</strong> - Summerville, SC
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stand Behind Our Work Section -->
+    <section class="stand-behind-section">
+        <div class="container">
+            <div class="stand-behind-grid">
+                <div class="stand-behind-content">
+                    <h2>Because We Actually Stand Behind Our Work</h2>
+                    <p>We live and work in this community, just like you. Our families, neighbors, and friends depend on us to deliver results — not excuses. That's why every Vinx treatment comes with our iron-clad satisfaction guarantee.</p>
+                    <p>Our treatments aren't just effective — they're also designed with your family's safety in mind. We use EPA-approved products applied by trained, licensed technicians who know exactly how to target pests while keeping your loved ones protected.</p>
+                    <p>When you choose Vinx, you're choosing a company that values integrity, quality, and community. That's our promise to you.</p>
+                    <div class="trust-badges">
+                        <div class="trust-badge">
+                            <div class="trust-badge-icon"><i class="fas fa-clock"></i></div>
+                            <span>Same-Day Service</span>
+                        </div>
+                        <div class="trust-badge">
+                            <div class="trust-badge-icon"><i class="fas fa-redo"></i></div>
+                            <span>Free Re-Services</span>
+                        </div>
+                        <div class="trust-badge">
+                            <div class="trust-badge-icon"><i class="fas fa-headset"></i></div>
+                            <span>24/7 Support</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="stand-behind-image">
+                    <img src="https://vinxpestcontrol.com/wp-content/uploads/2025/09/pest-monitor.webp" alt="Pest Monitor" style="width: 100%; border-radius: 15px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Pest Issues Section -->
+    <section class="pest-issues-section">
+        <div class="container">
+            <p class="section-label">COMMON PEST PROBLEMS</p>
+            <h2>Top Pest Issues</h2>
+            <div class="pest-descriptions">
+                <h4>Termites</h4>
+                <p>Termites can cause significant structural damage to your home before you even know they're there. Our termite control services include thorough inspections, treatment, and prevention strategies to protect your investment.</p>
+
+                <h4>Palmetto Bugs (American Cockroaches)</h4>
+                <p>These large cockroaches are common in warm, humid climates and can spread bacteria and trigger allergies. Our comprehensive treatment eliminates palmetto bugs and prevents their return.</p>
+
+                <h4>Mosquitoes</h4>
+                <p>Beyond being a nuisance, mosquitoes can transmit diseases. Our mosquito control programs target breeding sites and resting areas to significantly reduce mosquito populations around your home.</p>
+
+                <h4>Fire Ants</h4>
+                <p>Fire ant stings are painful and can be dangerous for those with allergies. Our fire ant elimination service treats existing mounds and creates a barrier to prevent new colonies from forming.</p>
+            </div>
+            <div class="pest-icons-grid">
+                <div class="pest-icon">
+                    <img src="images/2025/09/Cockroach_Extermination.svg" alt="Cockroach" onerror="this.src='https://vinxpestcontrol.com/wp-content/uploads/2025/09/Cockroach_Extermination.svg'">
+                    <span>Cockroach Control</span>
+                </div>
+                <div class="pest-icon">
+                    <img src="images/2025/09/Rodent_Extermination.svg" alt="Rodent" onerror="this.src='https://vinxpestcontrol.com/wp-content/uploads/2025/09/Rodent_Extermination.svg'">
+                    <span>Rodent Control</span>
+                </div>
+                <div class="pest-icon">
+                    <img src="images/2025/09/Mosquito_Control.svg" alt="Mosquito" onerror="this.src='https://vinxpestcontrol.com/wp-content/uploads/2025/09/Mosquito_Control.svg'">
+                    <span>Mosquito Control</span>
+                </div>
+                <div class="pest-icon">
+                    <img src="images/2025/09/Bed_Bug_Control.svg" alt="Bed Bug" onerror="this.src='https://vinxpestcontrol.com/wp-content/uploads/2025/09/Bed_Bug_Control.svg'">
+                    <span>Bed Bug Control</span>
+                </div>
+                <div class="pest-icon">
+                    <img src="images/2025/09/Spider_Control.svg" alt="Spider" onerror="this.src='https://vinxpestcontrol.com/wp-content/uploads/2025/09/Spider_Control.svg'">
+                    <span>Spider Control</span>
+                </div>
+                <div class="pest-icon">
+                    <img src="images/2025/09/Ant_Control.svg" alt="Ant" onerror="this.src='https://vinxpestcontrol.com/wp-content/uploads/2025/09/Ant_Control.svg'">
+                    <span>Ant Control</span>
+                </div>
+                <div class="pest-icon">
+                    <img src="images/2025/09/Termite_Control.svg" alt="Termite" onerror="this.src='https://vinxpestcontrol.com/wp-content/uploads/2025/09/Termite_Control.svg'">
+                    <span>Termite Control</span>
+                </div>
+                <div class="pest-icon">
+                    <img src="images/2025/09/Flea_Tick_Control.svg" alt="Flea & Tick" onerror="this.src='https://vinxpestcontrol.com/wp-content/uploads/2025/09/Flea_Tick_Control.svg'">
+                    <span>Flea & Tick Control</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Experts Section -->
+    <section class="best-experts-section">
+        <div class="container">
+            <div class="experts-grid">
+                <div class="experts-content">
+                    <h2>The Best Pest Control Experts Around</h2>
+                    <p>Our technicians aren't just trained — they're experts who genuinely care about solving your pest problems. Every team member undergoes rigorous training and continues to learn about the latest pest control techniques and products.</p>
+                    <p>We hire local technicians who understand the specific pest challenges in your area. They know which pests are most active during different seasons and the most effective methods for eliminating them.</p>
+                    <p>When you call Vinx, you're getting a team that treats your home like their own. We're not satisfied until you're completely pest-free.</p>
+                </div>
+                <div class="experts-image">
+                    <img src="https://vinxpestcontrol.com/wp-content/uploads/2025/09/Team_Photo.webp" alt="Vinx Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Local Pest Control Section -->
+    <section class="local-section">
+        <div class="container">
+            <h2>Best Local Pest Control</h2>
+            <p>We're a trusted, local pest control company. We love our local area and are committed to providing the best pest control services around. Our team members live and work in your community, so we understand the unique pest challenges you face.</p>
+            <p>With years of experience serving local homeowners and businesses, we've developed proven strategies that work in your specific climate and environment.</p>
+            <p><a href="areas-we-service.html" class="btn-link">View all service areas and pricing for your area &rarr;</a></p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Professional Reliable Pest Control for Homes and Property</h2>
+            <p class="faq-subtitle">Get answers to the most common questions about professional pest control services.</p>
+            <p style="text-align: center; margin-bottom: 30px; font-weight: 600;">FREQUENTLY ASKED QUESTIONS</p>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <button class="faq-question">What pests are most common in your area? <i class="fas fa-plus"></i></button>
+                    <div class="faq-answer">
+                        <p>The most common pests include palmetto bugs (American cockroaches), fire ants, mosquitoes, termites, spiders, and rodents. Our treatments cover 50+ pest types.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How often should I have pest control service? <i class="fas fa-plus"></i></button>
+                    <div class="faq-answer">
+                        <p>We recommend quarterly treatments for most homes. However, specific situations may require monthly or bi-monthly treatments, especially for severe infestations.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Are your treatments safe for my family and pets? <i class="fas fa-plus"></i></button>
+                    <div class="faq-answer">
+                        <p>Yes! All products we use are EPA-approved and applied according to strict guidelines. Pets and children can typically return to treated areas once products have dried, usually within 2-4 hours.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What happens if pests come back between treatments? <i class="fas fa-plus"></i></button>
+                    <div class="faq-answer">
+                        <p>That's covered by our satisfaction guarantee! Simply contact us and we'll send a technician to re-treat at no additional cost.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How much does pest control service cost? <i class="fas fa-plus"></i></button>
+                    <div class="faq-answer">
+                        <p>Our pricing starts at $49/month for HomeGuard, $69/month for Guard Plus, and $99/month for Platinum. Contact us for a free inspection and customized quote!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Still Have Questions CTA -->
+    <section class="questions-cta">
+        <div class="container">
+            <h3>Still Have Questions?</h3>
+            <p>We're here to help. Contact us today for a free consultation and quote.</p>
+            <a href="contact.html" class="btn-white">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Coverage Section -->
+    <section class="coverage-section">
+        <div class="container">
+            <p class="section-label">SERVICE AREA</p>
+            <h2>Comprehensive Pest Control Coverage</h2>
+            <div class="coverage-box">
+                <h3>Total Pest Protection for Your Home and Property</h3>
+                <p>Vinx Pest Control provides residential and commercial pest control services to homes and businesses throughout the region. We offer same-day and next-day service with affordable pricing and 100% satisfaction guaranteed.</p>
+                <div class="coverage-stats">
+                    <div class="coverage-stat">
+                        <h4>50+</h4>
+                        <span>Communities served</span>
+                    </div>
+                    <div class="coverage-stat">
+                        <h4>24/7</h4>
+                        <span>Emergency service</span>
+                    </div>
+                    <div class="coverage-stat">
+                        <h4>100%</h4>
+                        <span>Satisfaction guaranteed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <img src="images/2025/09/vinx-logo.webp" alt="Vinx Pest Control" class="footer-logo" onerror="this.src='https://vinxpestcontrol.com/wp-content/uploads/2025/09/vinx-logo.webp'">
+                    <p>Vinx Pest Control is your trusted partner for comprehensive pest management. We're committed to protecting your home and family from unwanted pests.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/VinxPestControl" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/vinxpestcontrol" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@vinxpestcontrol" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="special-offers.html">Special Offers</a></li>
+                        <li><a href="get-quote.html">Get A Quote</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Charleston, SC</h4>
+                    <ul>
+                        <li><a href="locations/charleston.html">Charleston</a></li>
+                        <li><a href="locations/mount-pleasant.html">Mount Pleasant</a></li>
+                        <li><a href="locations/summerville.html">Summerville</a></li>
+                        <li><a href="locations/goose-creek.html">Goose Creek</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Greenville, SC</h4>
+                    <ul>
+                        <li><a href="locations/greenville.html">Greenville</a></li>
+                        <li><a href="locations/spartanburg.html">Spartanburg</a></li>
+                        <li><a href="locations/simpsonville.html">Simpsonville</a></li>
+                        <li><a href="locations/greer.html">Greer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Virginia Beach</h4>
+                    <ul>
+                        <li><a href="locations/virginia-beach.html">Virginia Beach</a></li>
+                        <li><a href="locations/norfolk.html">Norfolk</a></li>
+                        <li><a href="locations/chesapeake.html">Chesapeake</a></li>
+                        <li><a href="locations/newport-news.html">Newport News</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Vinx Pest Control. All rights reserved.</p>
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const isActive = faqItem.classList.contains('active');
+
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+
+        // Mobile Menu Toggle
+        const mobileToggle = document.querySelector('.mobile-menu-toggle');
+        if (mobileToggle) {
+            mobileToggle.addEventListener('click', function() {
+                document.querySelector('.nav-menu').classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>
